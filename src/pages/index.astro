@@ -1,9 +1,13 @@
 ---
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 ---
 
 <Layout>
+	<Navigation />
 	<Welcome />
+	<Footer />
 </Layout>

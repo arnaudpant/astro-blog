@@ -1,0 +1,8 @@
+---
+const { frontmatter } = Astro.props;
+---
+<meta charset="utf-8" />
+<h1>{frontmatter.title} from layout</h1>
+<p>Écrit par {frontmatter.author} from layout</p>
+<p>{frontmatter.tags[2]}</p>
+<slot />
