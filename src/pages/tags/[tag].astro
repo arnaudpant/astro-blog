@@ -1,0 +1,15 @@
+---
+export async function getStaticPaths() {
+  return [
+    { params: { tag: "astro" } },
+    { params: { tag: "succes" } },
+    { params: { tag: "communauté" } },
+    { params: { tag: "blogging" } },
+    { params: { tag: "obstacles" } },
+    { params: { tag: "apprentissage en public" } },
+  ];
+}
+
+const { tag } = Astro.params;
+---
+  <p>Articles étiquetés avec {tag}</p>
