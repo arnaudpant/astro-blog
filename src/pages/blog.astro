@@ -1,22 +1,20 @@
 ---
+import { getCollection } from "astro:content";
+import Main from "../components/Main.astro";
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
----
-<html lang="fr">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <title>Articles blog</title>
-  </head>
-  <body>
-    <a href="/">Accueil</a>
-    <a href="/about/">À propos</a>
-    <a href="/blog/">Blog</a>
 
-    <h1>Mon blog d'apprentissage Astro</h1>
-    <p>Voici où je vais publier mon parcours d'apprentissage d'Astro.</p>
-    <ul>
-     {allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
-    </ul>
-  </body>
-</html>
+const posts = await getCollection("posts")
+console.log(posts)
+---
+<Layout title='Blog | posts'>
+	<Main>
+		<h1>Latest posts</h1>
+    {
+      posts.map(post => (
+        <h2>{post.data.title}</h2>
+      ))
+    }
+	</Main>
+
+</Layout>
