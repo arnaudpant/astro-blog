@@ -1,10 +1,10 @@
 ---
-source: pam-beesely
-categories: ["business"]
+source: jim-halpert
+categories: ["insights"]
 date: 08/10/2021
 featured: false
 image: ./images/post-avatar.png
-title: Creating a successful music brand
+title: Live music is crucial
 ---
 
 Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.

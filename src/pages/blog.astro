@@ -3,17 +3,16 @@ import { getCollection } from "astro:content";
 import Main from "../components/Main.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import PostList from "../components/PostList.astro";
 
 const posts = await getCollection("posts")
-console.log(posts)
 ---
 <Layout title='Blog | posts'>
 	<Main>
 		<h1>Latest posts</h1>
     {
       posts.map(post => (
-        <h2>{post.data.title}</h2>
-        <p>Mon post de test</p>
+        <PostList posts={posts} />
       ))
     }
 	</Main>
