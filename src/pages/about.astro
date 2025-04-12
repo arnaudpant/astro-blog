@@ -1,17 +1,13 @@
 ---
+import Main from "../components/Main.astro";
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 const pageTitle = "À propos de moi";
 ---
-<html lang="fr">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <title>About</title>
-  </head>
-<body>
-    <a href="/">Accueil</a>
-    <a href="/blog">Blog</a>
-    <h1 class="text-4xl">{pageTitle}</h1>
-    <p>A propos de moi</p>
-</body>
-</html>
+<Layout title=' A propos'>
+	<Main>
+		<h1 class="text-[#1F2937] text-xl md:text-3xl text-center">A propos</h1>
+
+	</Main>
+
+</Layout>

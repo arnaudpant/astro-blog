@@ -9,7 +9,6 @@ const posts = await getCollection("posts")
 ---
 <Layout title='Blog | posts'>
 	<Main>
-		<h2 class="py-8">Latest posts</h2>
     {
       posts.map(post => (
         <PostList posts={posts} />
