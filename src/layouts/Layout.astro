@@ -1,6 +1,6 @@
 ---
 import Header from '../components/Header.astro';
-
+import { ClientRouter } from "astro:transitions";
 interface Props {
 	title: string;
 	description?: string;
@@ -20,6 +20,7 @@ const {title, description, image} = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ClientRouter />
 	</head>
 	<body class="min-h-screen bg-[#FAF5F0] text-[#2E2E2E]">
 		<Header />
