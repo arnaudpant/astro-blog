@@ -1,16 +1,12 @@
 ---
-import type { CollectionEntry } from "astro:content"
-import {getCollection, getEntry} from "astro:content"
+import {getEntry} from "astro:content"
 import Main from "../../components/Main.astro"
 import Layout from "../../layouts/Layout.astro"
 import {Image} from "astro:assets"
 import "../../styles/global.css";
-import { getEntries } from "astro:content"
-import { dev } from "astro"
 
 const {slug} = Astro.params;
 const post = await getEntry("posts",  slug as string)
-console.log(post)
 
 if (!post) {
     return Astro.redirect('/404')
