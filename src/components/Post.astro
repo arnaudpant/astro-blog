@@ -11,9 +11,9 @@ const {post} = Astro.props
 const source = await getEntry("sources", post.data.source)
 ---
 
-<article>
+<article class="max-w-lg">
     <a
-        href={`/${post.slug}`}
+        href={`/blog/${post.slug}`}
         aria-label={`Read more about ${post.data.title}`}
     >
         <Image
@@ -22,39 +22,32 @@ const source = await getEntry("sources", post.data.source)
             width={600}
             height={600 / 1.5}
             format="webp"
-            class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
+            class="rounded-2xl shadow-xl mb-3 aspect-thumbnail object-cover"
         />
+        <div class="mb-2">
+            <CategoryList categories={post.data.categories} />
+        </div>
+    
+        <p class="text-zinc-500 text-2xl mb-5 line-clamp-2">
+            {post.body}
+        </p>
+    
+        <div class="flex justify-between items-center">
+            {
+                source ? (
+                    <a
+                        href={`/source/${source.slug}`}
+                        class="text-zinc-900 text-lg"
+                    >
+                        {source.data.name}
+                    </a>
+                ) : null
+            }
+    
+            <span class="text-zinc-700 text-md">
+                {post.data.date}
+            </span>
+        </div>
     </a>
 
-    <div class="mb-4">
-        <CategoryList categories={post.data.categories} />
-    </div>
-
-    <a
-        href={`/blog/${post.slug}`}
-        class="text-4xl text-zinc-900 mb-4 font-semibold inline-block"
-    >
-        {post.data.title}
-    </a>
-
-    <p class="text-zinc-500 text-2xl mb-9 line-clamp-2">
-        {post.body}
-    </p>
-
-    <div class="flex justify-between items-center">
-        {
-            source ? (
-                <a
-                    href={`/author/${source.slug}`}
-                    class="text-zinc-900 text-2xl font-bold"
-                >
-                    {source.data.name}
-                </a>
-            ) : null
-        }
-
-        <span class="text-zinc-700 text-xl">
-            {post.data.date}
-        </span>
-    </div>
 </article>
