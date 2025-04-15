@@ -16,17 +16,20 @@ const {Content} = await post.render()
 ---
 <Layout title={post.data.title}>
 	<Main>
-        <Image
-        src={post.data.image}
-        alt={post.data.title}
-        width={1024}
-        height={1024 / 1.5}
-        format="webp"
-        class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
-        />
-        <div class="prose md:prose-xl overflow-visible relative mb-20">
-            <h1 class="py-8">{post.data.title}</h1>
-            <Content />
+        <div class="w-full flex flex-col items-center">
+            <Image
+            src={post.data.image}
+            alt={post.data.title}
+            width={800}
+            height={800 / 1.5}
+            format="webp"
+            class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
+            />
+            <div class="prose md:prose-xl overflow-visible relative mb-20">
+                <h1 class="py-8">{post.data.title}</h1>
+                <Content />
+            </div>
+
         </div>
 	</Main>
 
