@@ -2,14 +2,24 @@
 import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
-
+import { Image } from 'astro:assets';
 export const prerender = true
+
+import myImage from "../assets/home.webp"
 ---
 
 <Layout title='My Blog'>
 	<Main>
-		<h1 class="text-[#1F2937] text-xl md:text-3xl text-center">Bienvenue sur mon blog ou plutôt carnet de notes</h1>
-
+		<h1 class="text-[#1F2937] text-xl md:text-3xl text-center pb-6">Bienvenue sur mon blog ou plutôt carnet de notes</h1>
+		<p class="text-center text-xl pb-10">C'est ici que je documente ce que j'apprends, je parle de code et d'autres choses en tant que développeur Web.</p>
+		 <Image
+            src={myImage}
+            alt="astronaute codant en react et astro.js"
+            width={500}
+            height={500 / 1.5}
+            format="webp"
+            class="rounded-2xl shadow-xl mb-3 aspect-thumbnail object-cover mx-auto"
+        />
 	</Main>
 
 </Layout>
