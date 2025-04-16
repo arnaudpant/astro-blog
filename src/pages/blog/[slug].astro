@@ -17,15 +17,15 @@ const {Content} = await post.render()
 <Layout title={post.data.title}>
 	<Main>
         <div class="w-full flex flex-col items-center">
-            <img src="/images/article-01.png" alt="test" />
-            <Image
+            <img src={post.data.image as unknown as string} alt="test" />
+            <!-- <Image
             src={post.data.image}
             alt={post.data.title}
             width={800}
             height={800 / 1.5}
             format="webp"
             class="rounded-2xl shadow-xl mb-6 object-cover"
-            />
+            /> -->
             <div class="prose md:prose-xl overflow-visible relative mb-20">
                 <h1 class="py-8">{post.data.title}</h1>
                 <Content />
