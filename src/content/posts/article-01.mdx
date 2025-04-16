@@ -7,7 +7,7 @@ image: ./images/article-01.png
 title: Pourquoi j'ai choisi Astro plutôt que Next.js
 ---
 import {Image} from "astro:assets"
-import myImage from "./images/article-01.png";
+import myImage from "/images/article-01.png";
 
 Pourquoi suivre le troupeau quand on peut prendre un chemin moins emprunté ? 🐑 Aujourd'hui, la majorité des développeurs React basculent sur Next.js et c'est logique.                 
 
@@ -38,9 +38,9 @@ Je débute tout juste avec Astro, donc je ne vais pas prétendre tout maîtriser
 
 Les premiers pas sont prometteurs, mais une question demeure : **y a-t-il un marché de l'emploi pour les développeurs Astro ?**
 
-<img
+ <Image
             src={myImage}
-            alt="Astronaute"
+            alt={post.data.title}
             width={800}
             height={800 / 1.5}
             format="webp"
