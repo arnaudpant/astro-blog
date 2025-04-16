@@ -6,6 +6,8 @@ featured: false
 image: ./images/article-01.png
 title: Pourquoi j'ai choisi Astro plutôt que Next.js
 ---
+import {Image} from "astro:assets"
+import myImage from "./images/article-01.png";
 
 Pourquoi suivre le troupeau quand on peut prendre un chemin moins emprunté ? 🐑 Aujourd'hui, la majorité des développeurs React basculent sur Next.js et c'est logique.                 
 
@@ -13,11 +15,11 @@ Pourquoi suivre le troupeau quand on peut prendre un chemin moins emprunté ? �
 
 Next.js est puissant, populaire et soutenu par une énorme communauté.
 
-Mais c'est justement là que ça coince. Quand tout le monde adopte une technologie, la concurrence devient rude. Se démarquer, comme c'est déjà le cas avec React, devient un vrai défi.
+Mais c'est justement çà le "problème". Quand tout le monde adopte une technologie, la concurrence devient rude. Se démarquer, comme c'est déjà le cas avec React, devient un vrai challenge.
 
 ## Le SEO : un facteur décisif
 
-Depuis quelques semaines, je me forme au SEO et j'ai rapidement constaté que React n'est pas vraiment taillé pour ça. J'ai donc cherché une alternative qui soit à la fois performante et plus simple à apprendre que Next.js.
+Depuis quelques semaines, je me forme au SEO et React n'est pas vraiment taillé pour ça, malgré la nouvelle version 19. J'ai donc cherché une alternative qui soit à la fois performante et plus simple à apprendre que Next.js.
 
 **Astro s'est imposé comme une évidence.**
 
@@ -35,3 +37,12 @@ Ce framework est encore jeune, mais il gagne rapidement en popularité grâce à
 Je débute tout juste avec Astro, donc je ne vais pas prétendre tout maîtriser. Mais ce que je remarque déjà, c'est sa simplicité et son approche orientée performance. Il semble être un excellent choix pour créer des sites rapides et légers qui doivent être optimisés pour le référencement.
 
 Les premiers pas sont prometteurs, mais une question demeure : **y a-t-il un marché de l'emploi pour les développeurs Astro ?**
+
+<Image
+            src={myImage}
+            alt="Astronaute"
+            width={800}
+            height={800 / 1.5}
+            format="webp"
+            class="rounded-2xl shadow-xl mb-6 object-cover"
+            />
