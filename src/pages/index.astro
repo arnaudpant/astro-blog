@@ -1,11 +1,12 @@
 ---
+import "../styles/global.css";
 import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
 import { Image } from 'astro:assets';
+import myImage from "../assets/home.webp"
+
 export const prerender = true
 
-import myImage from "../assets/home.webp"
 ---
 
 <Layout title='My Blog'>
