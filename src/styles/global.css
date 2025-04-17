@@ -1,2 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+    --color-bluesky: #FAF5F0;
+    --color-fond: #FAF5F0;
+    --color-textblack: #1F2937;
+    --font-poppins: Poppins, sans-serif;
+}

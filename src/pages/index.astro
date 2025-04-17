@@ -2,26 +2,18 @@
 import "../styles/global.css";
 import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import myHomeImage from "../assets/home.webp"
 
 export const prerender = true
 
 ---
 
-<Layout title='My Blog'>
+<Layout title='Blog de dev'>
 	<Main>
-		<h1 class="text-[#1F2937] text-xl md:text-3xl text-center pb-6">Bienvenue sur mon blog ou plutôt carnet de notes</h1>
-		<p class="text-center text-xl pb-10">Je note ici ce que j'apprends au quotidien comme développeur web React et Astro. Mes solutions aux problèmes techniques, mes découvertes et mes réflexions. 
-            Je publie dès que quelque chose mérite d'être partagé ou quand j'explore de nouvelles choses. Ce carnet de notes me sert de mémoire, et avec un peu de chance, il vous sera aussi utile.</p>
-		 <Image
-            src={myHomeImage}
-            alt="astronaute codant en react et astro.js"
-            width={500}
-            height={500 / 1.5}
-            format="webp"
-            class="rounded-2xl shadow-xl mb-3 aspect-thumbnail object-cover mx-auto"
-        />
+		<h1 class="text-[#1F2937] text-xl md:text-3xl text-center pb-10 md:pb-6">Blog et carnet de notes de développeur web</h1>
+		<p class="text-center text-xl pb-3">Je note ici ce que j'apprends au quotidien comme développeur web React et Astro, mes solutions aux problèmes techniques, mes découvertes et mes réflexions. 
+        </p>
+        <p class="text-center text-lg pb-3">Je publie dès que quelque chose mérite d'être partagé ou quand j'explore de nouvelles choses.</p>
+		<p class="text-center text-lg pb-10">Ce carnet de notes me sert de mémoire, et avec un peu de chance, il vous sera aussi utile.</p>
 	</Main>
 
 </Layout>

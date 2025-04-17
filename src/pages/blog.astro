@@ -8,9 +8,7 @@ import PostList from "../components/PostList.astro";
 const posts = await getCollection("posts")
 ---
 <Layout title='Blog | posts'>
-
   <Main>
         <PostList posts={posts} />
 	</Main>
-
 </Layout>

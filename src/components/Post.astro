@@ -16,6 +16,11 @@ const source = await getEntry("sources", post.data.source)
         href={`/blog/${post.slug}`}
         aria-label={`Read more about ${post.data.title}`}
     >
+    <div class="pb-2">
+        <span class="text-zinc-700 text-xs">
+            {post.data.date}
+        </span>
+    </div>
         <Image
             src={post.data.image}
             alt={post.data.title}
@@ -24,19 +29,14 @@ const source = await getEntry("sources", post.data.source)
             format="webp"
             class="rounded-2xl shadow-xl mb-3 aspect-thumbnail object-cover"
         />
-        <div class="mb-1">
-            <CategoryList categories={post.data.categories} />
-        </div>
-    
+        
         <p class="text-zinc-500 text-2xl mb-5 line-clamp-2 text-center">
             {post.data.title}
         </p>
-    
-        <div class="border-b-2 border-b-gray-400 pb-4">
-            <span class="text-zinc-700 text-sm">
-                {post.data.date}
-            </span>
+        <div class="mb-4 border-b-1 border-b-gray-400">
+            <CategoryList categories={post.data.categories} />
         </div>
+    
     </a>
 
 </article>
