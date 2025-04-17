@@ -3,7 +3,7 @@ import "../styles/global.css";
 import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import myImage from "../assets/avatar.png"
+import myHomeImage from "../assets/home.webp"
 
 export const prerender = true
 
@@ -12,9 +12,10 @@ export const prerender = true
 <Layout title='My Blog'>
 	<Main>
 		<h1 class="text-[#1F2937] text-xl md:text-3xl text-center pb-6">Bienvenue sur mon blog ou plutôt carnet de notes</h1>
-		<p class="text-center text-xl pb-10">C'est ici que je documente ce que j'apprends, je parle de code et d'autres choses en tant que développeur Web.</p>
+		<p class="text-center text-xl pb-10">Je note ici ce que j'apprends au quotidien comme développeur web React et Astro. Mes solutions aux problèmes techniques, mes découvertes et mes réflexions. 
+            Je publie dès que quelque chose mérite d'être partagé ou quand j'explore de nouvelles choses. Ce carnet de notes me sert de mémoire, et avec un peu de chance, il vous sera aussi utile.</p>
 		 <Image
-            src={myImage}
+            src={myHomeImage}
             alt="astronaute codant en react et astro.js"
             width={500}
             height={500 / 1.5}
