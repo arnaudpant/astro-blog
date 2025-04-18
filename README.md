@@ -1,48 +1,58 @@
-# Astro Starter Kit: Basics
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
-```sh
-npm create astro@latest -- --template basics
+## Mon Blog Développeur
+
+Bienvenue sur le dépôt GitHub de mon blog personnel : [my-blog-developer.netlify.app](https://my-blog-developer.netlify.app/)
+
+---
+
+**À propos du blog**
+
+Ce blog est dédié au partage de mes expériences, découvertes et tutoriels autour du développement web, de la programmation et des nouvelles technologies. Vous y trouverez des articles techniques, des guides pratiques, ainsi que des réflexions sur l’actualité du monde du développement.
+
+---
+
+**Fonctionnalités principales**
+
+- Articles réguliers sur le développement web et logiciel
+- Tutoriels étape par étape
+- Conseils et bonnes pratiques pour développeurs
+- Interface moderne et responsive
+
+---
+
+**Accès au blog**
+
+Vous pouvez consulter le blog à l’adresse suivante :
+[https://my-blog-developer.netlify.app/](https://my-blog-developer.netlify.app/)
+
+---
+
+**Contribuer**
+
+Les contributions sont les bienvenues !
+N’hésitez pas à ouvrir une issue ou à proposer une pull request pour suggérer une amélioration, corriger une erreur ou partager un sujet d’article.
+
+---
+
+**Installation locale**
+
+Pour cloner et lancer le blog en local :
+
+```bash
+git clone https://github.com/votre-utilisateur/nom-du-repo.git
+cd nom-du-repo
+npm install
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+**Licence**
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Ce projet est sous licence MIT.
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+Merci de votre visite et bonne lecture !
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
