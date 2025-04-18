@@ -1,6 +1,6 @@
 
 
-# Mon Blog Développeur
+# Mon Blog Développeur React & Astro
 
 Bienvenue sur le dépôt GitHub de mon blog personnel : [my-blog-developer.netlify.app](https://my-blog-developer.netlify.app/)
 
