@@ -12,5 +12,5 @@ const {posts} = Astro.props
 <div
     class="flex flex-wrap justify-center gap-6"
 >
-    {posts.map(post => <Post post={post} />)}
+    {posts.map(post => <Post post={post} />).reverse()}
 </div>
