@@ -2,18 +2,19 @@
 import "../styles/global.css";
 import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
+import PostList from "../components/PostList.astro";
+import { getCollection } from "astro:content";
 
 export const prerender = true
+const posts = await getCollection("posts")
 
 ---
 
 <Layout title='Blog de dev'>
 	<Main>
-		<h1 class="text-[#1F2937] text-xl md:text-3xl text-center pb-10 md:pb-6">Blog et carnet de notes de développeur web</h1>
-		<p class="text-center text-lg pb-3">Je note ici ce que j'apprends au quotidien comme développeur web React et Astro, mes solutions aux problèmes techniques, mes découvertes et mes réflexions. 
-        </p>
-        <p class="text-center text-lg pb-3">Je publie dès que quelque chose mérite d'être partagé ou quand j'explore de nouvelles choses.</p>
-		<p class="text-center text-lg pb-10">Ce carnet de notes me sert de mémoire, et avec un peu de chance, il vous sera aussi utile.</p>
+		<h1 class="text-title text-xl md:text-3xl text-center pb-10 md:pb-6">Blog et carnet de notes d'un développeur web</h1>
+		<p class="text-textgrey text-center pb-6">Derniers articles</p>
+		<PostList posts={posts} home={true} />
 	</Main>
 
 </Layout>

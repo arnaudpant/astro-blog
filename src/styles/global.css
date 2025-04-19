@@ -3,7 +3,13 @@
 
 @theme {
     --color-bluesky: #FAF5F0;
-    --color-fond: #FAF5F0;
-    --color-textblack: #1F2937;
+    --color-fond: #E0F7FA;
+    --color-fond-secondary: #B2DFDB;
+    --color-link: #009688;
+    --color-title: #004D40;
+    --color-textblack: #212121;
+    --color-textgrey: #333333;
+    --color-textgreen: #00796B;
+    --color-border-divider: #00796B;
     --font-poppins: Poppins, sans-serif;
 }

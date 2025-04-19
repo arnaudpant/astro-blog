@@ -17,7 +17,7 @@ const source = await getEntry("sources", post.data.source)
         aria-label={`Read more about ${post.data.title}`}
     >
     <div class="pb-2">
-        <span class="text-zinc-700 text-xs">
+        <span class="text-textgreen text-xs">
             {post.data.date}
         </span>
     </div>
@@ -27,10 +27,10 @@ const source = await getEntry("sources", post.data.source)
             width={600}
             height={600 / 1.5}
             format="webp"
-            class="rounded-2xl shadow-xl mb-3 aspect-thumbnail object-cover"
+            class="rounded-2xl shadow-lg mb-3 aspect-thumbnail object-cover"
         />
         
-        <p class="text-zinc-500 text-2xl mb-5 line-clamp-2 text-center">
+        <p class="text-title text-2xl mb-5 line-clamp-2 text-left">
             {post.data.title}
         </p>
         <div class="mb-4 border-b-1 border-b-gray-400">

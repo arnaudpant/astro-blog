@@ -1,0 +1,46 @@
+---
+import {type CollectionEntry, getEntry} from "astro:content"
+import {Image} from "astro:assets"
+import CategoryList from "./CategoryList.astro"
+
+type Props = {
+    post: CollectionEntry<"posts">
+}
+
+const {post} = Astro.props
+const source = await getEntry("sources", post.data.source)
+---
+
+<div class="w-full max-w-xl">
+    <a
+        href={`/blog/${post.slug}`}
+        aria-label={`Read more about ${post.data.title}`}
+    >
+
+        <div class="flex flex-col md:flex-row gap-2">
+            <div class="pb-2 md:pb-0 basis-1/3">
+                <Image
+                src={post.data.image}
+                alt={post.data.title}
+                width={200}
+                height={200 / 1.5}
+                format="webp"
+                class="rounded-2xl shadow-lg object-cover"
+                />
+            </div>
+
+            <div class="flex flex-col w-full basis-2/3">
+                <span class="text-textgreen text-xs">
+                    {post.data.date}
+                </span>
+                <p class="text-title text-2xl line-clamp-2 text-left">
+                    {post.data.title}
+                </p>
+                <div class="border-b-1 border-b-gray-400">
+                    <CategoryList categories={post.data.categories} />
+                </div>
+            </div>
+        </div>
+    </a>
+
+</div>
