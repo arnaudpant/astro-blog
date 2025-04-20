@@ -11,7 +11,7 @@ const {post} = Astro.props
 const source = await getEntry("sources", post.data.source)
 ---
 
-<article class="max-w-lg">
+<article class="max-w-xl">
     <a
         href={`/blog/${post.slug}`}
         aria-label={`Read more about ${post.data.title}`}
