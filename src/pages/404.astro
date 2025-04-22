@@ -1,11 +1,10 @@
 ---
 import Card from "../components/Card.astro"
-import Layout from "../layouts/Layout.astro";
 import LayoutError from "../layouts/LayoutError.astro";
+import "../styles/global.css";
 
-export const prerender = true
 ---
 
-<Layout title="Error">
+<LayoutError>
     <Card />
-</Layout>
+</LayoutError>
