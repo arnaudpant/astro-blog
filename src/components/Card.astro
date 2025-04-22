@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets"
+import bgError from "../assets/bg404.png"
+import ButtonLink from "./ButtonLink.astro"
+---
+
+<div class="">
+    <!-- <Image src={bgError} alt="Paysage" format="avif" class="max-h-[50vh] md:max-h-screen object-cover" /> -->
+    <div class="flex justify-between">
+        <p>Error 404</p>
+        <div>
+            <p>Oups</p>
+            <p>Vous avez découvert un monde inconnu</p>
+            <p>Cliquez sur le bouton pour revenir en terrain connu</p>
+            <ButtonLink href="/ ">Retour</ButtonLink>
+        </div>
+    </div>
+    
+</div>
