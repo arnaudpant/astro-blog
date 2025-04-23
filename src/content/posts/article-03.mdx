@@ -1,0 +1,53 @@
+---
+source: Article
+categories: ["Emploi", "Analyse"]
+date: 23/04/2025
+featured: false
+image: ./images/article-03.png
+banner: /images/article-03.webp
+title: État du Marché Front-End et Full-Stack 
+infos: Comparaison entre mes recherches et les tendances d'après l'article de Tim Severien
+---
+
+<img src={frontmatter.banner} alt={frontmatter.title} width={800} className="rounded-3xl mx-auto" />
+## 🧑‍💻 Les Tendances Révélées par l'Analyse des Offres d'Emploi
+Récemment, je suis tombé sur un article de Tim Severien intitulé "The state of the front-end and full-stack job market". Loin des sondages d'opinion, cet article adopte une approche basée sur des données concrètes : l'analyse automatisée d'un volume conséquent d'offres d'emploi.
+
+L'objectif ? Déterminer les technologies réellement en demande sur le marché. Voici une synthèse des points essentiels, enrichie par ma propre étude du marché.
+
+## Méthodologie Rigoureuse, Résultats Concrets
+L'auteur a opté pour une méthode d'analyse de texte brut ("plain text matching") afin d'identifier les technologies mentionnées dans les offres d'emploi, privilégiant la fiabilité à la complexité potentielle des modèles de langage. Cette approche, bien que pouvant générer quelques faux positifs, permet d'obtenir des données suffisamment robustes pour tirer des conclusions valides. Il est important de noter que les données sont biaisées en faveur des startups, scale-ups et entreprises de produits basées aux États-Unis et en Europe.
+
+## Les Technologies les Plus Demandées : Ce Que Disent les Offres d'Emploi
+
+### Librairies et Frameworks Front-End
+Sans surprise, React domine largement, étant mentionné au moins trois fois plus que toute autre librairie. Dans le domaine des frameworks, Next.js, basé sur React, se positionne comme le plus populaire.
+
+Ma propre étude confirme la domination de React, mais révèle également qu'Angular conserve une forte présence sur le marché. De nombreuses entreprises ayant développé leurs applications sur ce framework n'ont pas nécessairement l'envie ou les ressources pour migrer vers des technologies plus récentes. Vue.js apparaît également dans un nombre significatif d'offres.
+Concernant Astro, il n'est mentionné que dans environ 3% des offres d'emploi, ce qui rend peu probable l'obtention d'un poste avec ce framework pourtant prometteur. Son adoption pourrait s'accélérer dans les prochaines années.
+
+### Langages de Programmation
+JavaScript et TypeScript dominent naturellement le marché, suivis par Python et Ruby. Mon analyse confirme que TypeScript est désormais incontournable pour les développeurs front-end et full-stack. Quelques offres mentionnent également Go et C, mais elles restent marginales.
+Styles
+
+Étonnamment, seulement ~22,5% des offres mentionnent des outils de stylisation. Parmi celles-ci, Tailwind CSS arrive en tête, suivi de Sass.
+
+### Hébergement et Infrastructure
+AWS est de loin le fournisseur de services cloud le plus demandé, laissant les autres loin derrière. Dans l'espace PaaS, Vercel mène la danse. À noter la présence de Supabase au même niveau qu'Heroku et Firebase.
+Ma propre recherche révèle également que Docker apparaît régulièrement dans les offres d'emploi, tout comme Kubernetes pour l'orchestration de conteneurs.
+Bases de Données
+
+PostgreSQL reste une valeur sûre, tandis que MongoDB est également bien représentée. Ma propre analyse confirme cette tendance, avec une présence surprenamment forte de MongoDB dans les offres que j'ai étudiées. Node.js ressort également comme une technologie fréquemment demandée.
+ORM JavaScript
+
+Prisma se distingue comme l'ORM JavaScript le plus utilisé parmi les rares mentions d'ORM dans les offres.
+
+### Outils de Développement
+Mon étude révèle que Git, Jira et les outils de CI/CD sont fréquemment mentionnés dans les offres. Étonnamment, peu d'annonces font référence aux pratiques de tests, malgré leur importance dans le développement moderne.
+Expérience Requise
+L'analyse de Tim Severien montre que la majorité des offres d'emploi spécifiant un niveau d'expérience requis demandent moins de 10 ans, avec une concentration entre 3 et 6 ans. Mon étude suggère que 2 ans d'expérience semble être le minimum requis pour la plupart des postes.
+
+## Conclusion
+Cette analyse combinée offre un aperçu précieux des compétences actuellement recherchées sur le marché du développement web. 
+
+Pour les développeurs souhaitant rester compétitifs, l'accent devrait être mis sur React/Angular, TypeScript, PostgreSQL/MongoDB, AWS et les outils modernes de développement comme Docker et Git.
