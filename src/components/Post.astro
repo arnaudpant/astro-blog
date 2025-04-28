@@ -11,7 +11,7 @@ const {post} = Astro.props
 const source = await getEntry("sources", post.data.source)
 ---
 
-<article class="max-w-xl">
+<article class="max-w-lg">
     <a
         href={`/blog/${post.slug}`}
         aria-label={`Read more about ${post.data.title}`}
@@ -24,8 +24,8 @@ const source = await getEntry("sources", post.data.source)
         <Image
             src={post.data.image}
             alt={post.data.title}
-            width={600}
-            height={600 / 1.5}
+            width={512}
+            height={512 / 1.5}
             format="webp"
             class="rounded-2xl shadow-lg mb-3 aspect-thumbnail object-cover"
         />
