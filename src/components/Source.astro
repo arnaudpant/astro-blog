@@ -1,0 +1,14 @@
+---
+type Props = {
+    source: string
+}
+
+const {source} = Astro.props
+---
+
+<a
+    href={`/source/${source}`}
+    class="text-textgrey/40 uppercase text-xs"
+>
+    {source}
+</a>

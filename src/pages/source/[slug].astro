@@ -1,0 +1,31 @@
+---
+import {getCollection, getEntry} from "astro:content"
+import Main from "../../components/Main.astro"
+import Layout from "../../layouts/Layout.astro"
+import "../../styles/global.css";
+import SourceList from "../../components/SourceList.astro";
+import PostList from "../../components/PostList.astro";
+
+const source = Astro.params.slug as string;
+
+const allPosts = await getCollection('posts');
+const postsBySource = allPosts
+  .filter((post) => post.data.source.includes(source));
+
+---
+<Layout title="Source posts" description="Lecture par source d'articles">
+	<Main>
+       <a href="/blog" class="text-md mb-16 underline block pl-4"
+      >← Retour à blog</a>
+      <h1 class="text-title text-xl md:text-3xl text-center pb-6">Articles {source}</h1>
+      {
+        postsBySource.length === 0 ? (
+            <p>No posts were found with that tag</p>
+            ) : (
+         
+        <PostList posts={postsBySource} home={false} />
+       
+      )
+    }
+	</Main>
+</Layout>
