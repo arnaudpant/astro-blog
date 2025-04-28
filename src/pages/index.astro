@@ -12,7 +12,8 @@ const posts = await getCollection("posts")
 <Layout title='Blog de dev'>
 	<Main>
 		<h1 class="text-title text-xl md:text-3xl text-center pb-10 md:pb-6">Blog et carnet de notes d'un développeur web</h1>
-		<p class="text-textgrey text-center pb-6">Derniers articles</p>
+		<p class="text-textgrey text-center pb-6">Derniers articles 👇🏻</p>
 		<PostList posts={posts} home={true} />
+		<a href="/blog"><p class="text-textgrey text-center pb-6">Tous les articles 👉🏻</p></a>
 	</Main>
 </Layout>
