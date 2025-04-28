@@ -45,7 +45,7 @@ Un projet Astro est organisé pour séparer clairement les pages, les composants
     - `src/layouts/` : structures de page communes.
     - `public/` : fichiers statiques accessibles directement (images, robots.txt…).
     - `dist/` : résultat final après build, à déployer[^5].
-- Fonctionnement du routage basé sur la structure des fichiers dans `src/pages/`.
+- ✅ Fonctionnement du routage basé sur la structure des fichiers dans `src/pages/`.
 
 ---
 
@@ -167,15 +167,6 @@ Une fois le site prêt, il faut le déployer.
 
 ### 3. Intégrations full-stack
 
-```astro
-// Exemple d'API route
-export const GET = () =&gt; {
-  return new Response(JSON.stringify({ data }), {
-    headers: { 'Content-Type': 'application/json' }
-  });
-};
-```
-
 - **API Endpoints** : Création de routes backend dans `/src/pages/api/`
 - **Middleware** : Gestion d'authentification avec Astro middleware
 - **Astro DB** : Configuration et requêtage de bases de données
@@ -237,14 +228,5 @@ export const GET = () =&gt; {
     - WebSockets + Server Sent Events
     - Synchronisation d'état cross-clients
     - Optimisation pour faible latence
-
----
-
-## Ressources d'approfondissement
-
-- **Astro Advanced Patterns Handbook** (docs.astro.build/advanced-handbook)
-- **LearnAstro Masterclass** : Modules 4 à 8 sur les architectures avancées
-- **Astro Discord Community** : \#advanced-questions et \#showcase
-- **RFCs GitHub** : Suivi des features expérimentales
 
 Ce plan couvre l'ensemble des concepts nécessaires pour atteindre un niveau expert, avec des cas d'utilisation concrets tirés des meilleures pratiques de l'écosystème Astro. Chaque section doit être accompagnée d'expérimentations pratiques sur des projets réels.
