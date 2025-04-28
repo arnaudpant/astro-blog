@@ -20,7 +20,7 @@ Voici un plan d'apprentissage structuré, progressif et adapté pour apprendre �
 
 ---
 
-### 1. **Introduction à Astro.js et ses concepts clés**
+### 1. Introduction à Astro.js et ses concepts clés
 
 Astro.js est un générateur de sites statiques moderne, pensé pour la rapidité, la simplicité et l’intégration facile avec d’autres frameworks (React, Svelte, Vue, etc.). Son architecture en îlots (« islands architecture ») permet de n’envoyer que le strict minimum de JavaScript au navigateur, ce qui accélère le chargement des pages. Astro est également agnostique côté framework et propose à la fois la génération statique (SSG) et le rendu côté serveur (SSR).
 
@@ -33,7 +33,7 @@ Astro.js est un générateur de sites statiques moderne, pensé pour la rapidit�
 
 ---
 
-### 2. **Comprendre la structure d’un projet Astro**
+### 2. Comprendre la structure d’un projet Astro
 
 Un projet Astro est organisé pour séparer clairement les pages, les composants, les layouts et les ressources statiques.
 
@@ -49,7 +49,7 @@ Un projet Astro est organisé pour séparer clairement les pages, les composants
 
 ---
 
-### 3. **Créer des pages et du contenu** ✅
+### 3. Créer des pages et du contenu ✅
 
 Astro permet de créer des pages en `.astro` (syntaxe proche du HTML) ou en Markdown (`.md`).
 
@@ -61,7 +61,7 @@ Astro permet de créer des pages en `.astro` (syntaxe proche du HTML) ou en Mark
 
 ---
 
-### 4. **Utiliser les composants Astro**
+### 4. Utiliser les composants Astro
 
 Les composants sont des blocs réutilisables, écrits en `.astro` ou dans d’autres frameworks (React, Vue…).
 
@@ -74,7 +74,7 @@ Les composants sont des blocs réutilisables, écrits en `.astro` ou dans d’au
 
 ---
 
-### 5. **Layouts et organisation du contenu**
+### 5. Layouts et organisation du contenu
 
 Les layouts permettent de factoriser la structure commune à plusieurs pages (header, footer, etc.).
 
@@ -86,7 +86,7 @@ Les layouts permettent de factoriser la structure commune à plusieurs pages (he
 
 ---
 
-### 6. **Configuration avancée du projet**
+### 6. Configuration avancée du projet
 
 Astro se configure via le fichier `astro.config.mjs`.
 
@@ -98,7 +98,7 @@ Astro se configure via le fichier `astro.config.mjs`.
 
 ---
 
-### 7. **Gestion des ressources statiques**
+### 7. Gestion des ressources statiques
 
 Les fichiers placés dans `public/` sont accessibles directement depuis le site.
 
@@ -109,7 +109,7 @@ Les fichiers placés dans `public/` sont accessibles directement depuis le site.
 
 ---
 
-### 8. **Ajout d’interactivité (JavaScript et frameworks tiers)**
+### 8. Ajout d’interactivité (JavaScript et frameworks tiers)
 
 Astro permet d’ajouter du JavaScript uniquement là où c’est nécessaire.
 
@@ -121,7 +121,7 @@ Astro permet d’ajouter du JavaScript uniquement là où c’est nécessaire.
 
 ---
 
-### 9. **Déploiement du site Astro**
+### 9. Déploiement du site Astro
 
 Une fois le site prêt, il faut le déployer.
 
@@ -149,7 +149,7 @@ Une fois le site prêt, il faut le déployer.
 ---
 ## Plan d'expertise Astro.js (Niveau avancé)
 
-### 1. **Architecture avancée et optimisation des performances**
+### 1. Architecture avancée et optimisation des performances
 
 - **Islands Architecture** : Maîtrise des îlots d'interactivité et stratégies d'hydratation sélective
 - **Partial Hydration Patterns** : `client:load` vs `client:idle` vs `client:visible`
@@ -157,7 +157,7 @@ Une fois le site prêt, il faut le déployer.
 - **Optimisation Core Web Vitals** : Techniques avancées LCP/FID/CLS
 
 
-### 2. **Gestion d'état cross-frameworks**
+### 2. Gestion d'état cross-frameworks
 
 - **State Management** avec React Context + Astro Islands
 - **Props drilling** avancé entre composants de différents frameworks
@@ -165,7 +165,7 @@ Une fois le site prêt, il faut le déployer.
 - **Store global** avec Nano Stores (intégration via `@nanostores/astro`)
 
 
-### 3. **Intégrations full-stack**
+### 3. Intégrations full-stack
 
 ```astro
 // Exemple d'API route
@@ -182,7 +182,7 @@ export const GET = () =&gt; {
 - **Server Actions** : Mutations de données côté serveur
 
 
-### 4. **Content Collections avancées**
+### 4. Content Collections avancées
 
 - **Schémas TypeScript** pour validation de contenu
 - **Relations entre collections** (one-to-many, many-to-many)
@@ -190,7 +190,7 @@ export const GET = () =&gt; {
 - **i18n** : Implémentation multilingue avec collections
 
 
-### 5. **Rendu dynamique et SSR**
+### 5. Rendu dynamique et SSR
 
 - **Hybrid Rendering** : Combinaison SSG/SSR
 - **Incremental Static Regeneration** (ISR)
@@ -198,7 +198,7 @@ export const GET = () =&gt; {
 - **Cache Strategies** : Revalidation stale-while-revalidate
 
 
-### 6. **UI Framework Integration Profonde**
+### 6. UI Framework Integration Profonde
 
 - **Cross-framework Communication** : Événements entre React/Vue/Svelte
 - **Shared State** entre îlots de différents frameworks
@@ -206,7 +206,7 @@ export const GET = () =&gt; {
 - **Lazy Loading** de composants framework
 
 
-### 7. **Testing avancé**
+### 7. Testing avancé
 
 - **Component Testing** avec Playwright Component Testing
 - **E2E Testing** : Scénarios complexes multi-îlots
@@ -214,7 +214,7 @@ export const GET = () =&gt; {
 - **Load Testing** des API routes
 
 
-### 8. **Astro et écosystème moderne**
+### 8. Astro et écosystème moderne
 
 - **Monorepos** : Gestion de projets complexes avec Turborepo
 - **Module Federation** : Partage de composants entre micro-frontends
