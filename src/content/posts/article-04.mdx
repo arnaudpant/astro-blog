@@ -16,13 +16,13 @@ Comment apprendre Astro de manière optimale ?
 
 ## Plan d'apprentissage pour maîtriser les bases Astro.js avec la documentation officielle
 
-Voici un plan d'apprentissage structuré, progressif et adapté pour apprendre à coder avec Astro.js, en suivant la logique de découverte recommandée par la documentation officielle. Chaque section comprend un cours explicatif pour bien comprendre les concepts à maîtriser.
+Voici un plan d'apprentissage structuré, progressif et adapté pour apprendre à coder avec Astro. Chaque section comprend un cours explicatif pour bien comprendre les concepts à maîtriser.
 
 ---
 
 ### 1. Introduction à Astro.js et ses concepts clés
 
-Astro.js est un générateur de sites statiques moderne, pensé pour la rapidité, la simplicité et l’intégration facile avec d’autres frameworks (React, Svelte, Vue, etc.). Son architecture en îlots (« islands architecture ») permet de n’envoyer que le strict minimum de JavaScript au navigateur, ce qui accélère le chargement des pages. Astro est également agnostique côté framework et propose à la fois la génération statique (SSG) et le rendu côté serveur (SSR).
+Astro est un générateur de sites statiques moderne, pensé pour la rapidité, la simplicité et l’intégration facile avec d’autres frameworks (React, Svelte, Vue, etc.). Son architecture en îlots (« islands architecture ») permet de n’envoyer que le strict minimum de JavaScript au navigateur, ce qui accélère le chargement des pages. Astro est également agnostique côté framework et propose à la fois la génération statique (SSG) et le rendu côté serveur (SSR).
 
 **À apprendre :**
 
@@ -33,19 +33,19 @@ Astro.js est un générateur de sites statiques moderne, pensé pour la rapidit�
 
 ---
 
-### 2. Comprendre la structure d’un projet Astro
+### 2. Comprendre la structure d’un projet Astro ✅
 
 Un projet Astro est organisé pour séparer clairement les pages, les composants, les layouts et les ressources statiques.
 
 **À apprendre :**
 
-- ✅ Rôle de chaque dossier :
+- Rôle de chaque dossier :
     - `src/pages/` : chaque fichier correspond à une route.
     - `src/components/` : composants réutilisables.
     - `src/layouts/` : structures de page communes.
     - `public/` : fichiers statiques accessibles directement (images, robots.txt…).
     - `dist/` : résultat final après build, à déployer[^5].
-- ✅ Fonctionnement du routage basé sur la structure des fichiers dans `src/pages/`.
+- Fonctionnement du routage basé sur la structure des fichiers dans `src/pages/`.
 
 ---
 
@@ -55,9 +55,9 @@ Astro permet de créer des pages en `.astro` (syntaxe proche du HTML) ou en Mark
 
 **À apprendre :**
 
-- ✅ Création d’une page en `.astro` dans `src/pages/`.
-- ✅ Syntaxe de base d’un fichier `.astro` (frontmatter, balises HTML, intégration de variables).
-- ✅ Création de pages Markdown et utilisation du système de collections pour les blogs ou documentations.
+- Création d’une page en `.astro` dans `src/pages/`.
+- Syntaxe de base d’un fichier `.astro` (frontmatter, balises HTML, intégration de variables).
+- Création de pages Markdown et utilisation du système de collections pour les blogs ou documentations.
 
 ---
 
@@ -68,7 +68,7 @@ Les composants sont des blocs réutilisables, écrits en `.astro` ou dans d’au
 **À apprendre :**
 
 - ✅ Création et utilisation de composants Astro (`src/components/`).
-- Passage de props aux composants.
+- ✅ Passage de props aux composants.
 - Utilisation de slots pour le contenu dynamique.
 - Importation et utilisation de composants de frameworks tiers si besoin.
 
@@ -121,33 +121,18 @@ Astro permet d’ajouter du JavaScript uniquement là où c’est nécessaire.
 
 ---
 
-### 9. Déploiement du site Astro
+### 9. Déploiement du site Astro ✅
 
 Une fois le site prêt, il faut le déployer.
 
 **À apprendre :**
 
-- ✅ Génération du build final (`npm run build`).
-- ✅ Comprendre le contenu du dossier `dist/`.
-- Déploiement sur différentes plateformes (Vercel, Netlify ✅, hébergement statique…).
+- Génération du build final (`npm run build`).
+- Comprendre le contenu du dossier `dist/`.
+- Déploiement sur différentes plateformes (Vercel, Netlify, hébergement statique…).
 
 ---
-
-## Résumé du parcours
-
-1. Introduction et concepts clés d’Astro.js
-2. Installation et préparation de l’environnement
-3. Structure d’un projet Astro
-4. Création de pages et de contenu
-5. Utilisation des composants
-6. Layouts et organisation
-7. Configuration avancée
-8. Gestion des ressources statiques
-9. Ajout d’interactivité
-10. Déploiement
-
----
-## Plan d'expertise Astro.js (Niveau avancé)
+## Plan d'expertise Astro (Niveau avancé)
 
 ### 1. Architecture avancée et optimisation des performances
 
@@ -217,16 +202,11 @@ Une fois le site prêt, il faut le déployer.
 ## Projets d'expertise recommandés
 
 1. **Plateforme e-commerce** :
-    - ISR pour fiches produits
-    - Panier cross-îlots (React + Svelte)
-    - Checkout via API routes
-2. **CMS headless personnalisé** :
-    - Éditeur markdown enrichi
-    - Preview en temps réel
-    - Pipeline de publication automatisé
-3. **Application real-time** :
-    - WebSockets + Server Sent Events
-    - Synchronisation d'état cross-clients
-    - Optimisation pour faible latence
 
-Ce plan couvre l'ensemble des concepts nécessaires pour atteindre un niveau expert, avec des cas d'utilisation concrets tirés des meilleures pratiques de l'écosystème Astro. Chaque section doit être accompagnée d'expérimentations pratiques sur des projets réels.
+2. **CMS headless personnalisé** :
+
+3. **Application real-time** :
+
+Ce plan couvre l'ensemble des concepts nécessaires pour atteindre un niveau expert, avec des cas d'utilisation concrets tirés des meilleures pratiques de l'écosystème Astro. 
+
+Chaque section doit être accompagnée d'expérimentations pratiques sur des projets réels.
