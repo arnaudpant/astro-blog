@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import myLogo from '../assets/logo-astro-kal.png';
+
+type Props = {
+    taille: number
+}
+
+const {taille} = Astro.props
+---
+
+	<Image 
+		src={myLogo}
+		alt="logo"
+		width={taille}
+		height={taille}
+		format="webp"
+	/>

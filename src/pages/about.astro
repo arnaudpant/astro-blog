@@ -1,5 +1,6 @@
 ---
 import ButtonLink from "../components/ButtonLink.astro";
+import LogoAstroReact from "../components/LogoAstroReact.astro";
 import Layout from "../layouts/Layout.astro";
 
 
@@ -7,8 +8,11 @@ export const prerender = true
 ---
 <Layout title=' A propos'>
 	<h1 class="text-title text-xl md:text-3xl text-center pb-10 md:pb-6">Blog et carnet de notes d'un développeur web</h1>
-		<p class="text-center text-lg pb-3">Je note ici ce que j'apprends au quotidien comme développeur web React et Astro, mes solutions aux problèmes techniques, mes découvertes et mes réflexions. 
-        </p>
-        <p class="text-center text-lg pb-3">Je publie dès que quelque chose mérite d'être partagé ou quand j'explore de nouvelles choses.</p>
-		<p class="text-center text-lg pb-10">Ce carnet de notes me sert de mémoire.</p>
+	<p class="text-center text-lg pb-3">Je note ici ce que j'apprends au quotidien comme développeur web React et Astro, mes solutions aux problèmes techniques, mes découvertes et mes réflexions. 
+    </p>
+    <p class="text-center text-lg pb-3">Je publie dès que quelque chose mérite d'être partagé ou quand j'explore de nouvelles choses.</p>
+	<p class="text-center text-lg pb-10">Ce carnet de notes me sert de mémoire.</p>
+	<div class="flex justify-center mt-4">
+		<LogoAstroReact taille={120} />
+	</div>
 </Layout>
