@@ -15,14 +15,22 @@ const postsCollection = defineCollection({
             categories: z.array(z.string()),
             date: z
                 .string(),
-            featured: z.boolean().default(false),
             image: image(),
             title: z.string(),
             infos: z.string()
         }),
 })
 
+const sourcesCategory = defineCollection({
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            image: image(),
+        }),
+})
+
 export const collections = {
     sources: sourcesCollection,
     posts: postsCollection,
+    categorie: sourcesCategory
 }

@@ -1,23 +1,22 @@
 ---
-import {getCollection, getEntry} from "astro:content"
+import {getCollection} from "astro:content"
 import Main from "../../components/Main.astro"
 import Layout from "../../layouts/Layout.astro"
-import "../../styles/global.css";
-import CategoryList from "../../components/CategoryList.astro";
+// import "../../styles/global.css";
 import PostList from "../../components/PostList.astro";
 
-const category = Astro.params.slug as string;
+const categoryUrl = Astro.params.slug as string;
 
-const allPosts = await getCollection('posts');
-const postsByCategory = allPosts
-  .filter((post) => post.data.categories.includes(category));
+const allCategoriesPost = await getCollection('posts');
+const postsByCategory = allCategoriesPost
+  .filter((category) => category.data.categories.includes(categoryUrl));
 
 ---
 <Layout title="Catégories posts" description="Lecture par catégories d'articles">
 	<Main>
       <a href="/blog" class="text-md mb-16 underline block pl-4"
       >← Retour à blog</a>
-      <h1 class="text-title text-xl md:text-3xl text-center pb-6">Articles {category}</h1>
+      <h1 class="text-title text-xl md:text-3xl text-center pb-6">Articles {categoryUrl}</h1>
       {
         postsByCategory.length === 0 ? (
             <p>No posts were found with that tag</p>
