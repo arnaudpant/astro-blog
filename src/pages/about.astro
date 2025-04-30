@@ -2,11 +2,12 @@
 import ButtonLink from "../components/ButtonLink.astro";
 import LogoAstroReact from "../components/LogoAstroReact.astro";
 import Layout from "../layouts/Layout.astro";
+import { ABOUT_DESCRIPTION, ABOUT_TITLE } from "../lib/constantes";
 
 
 export const prerender = true
 ---
-<Layout title=' A propos'>
+<Layout title={ABOUT_TITLE} description={ABOUT_DESCRIPTION}>
 	<h1 class="text-title text-xl md:text-3xl text-center pb-10 md:pb-6">Blog et carnet de notes d'un développeur web</h1>
 	<p class="text-center text-lg pb-3">Je note ici ce que j'apprends au quotidien comme développeur web React et Astro, mes solutions aux problèmes techniques, mes découvertes et mes réflexions. 
     </p>

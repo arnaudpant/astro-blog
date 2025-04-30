@@ -4,10 +4,11 @@ import Main from "../components/Main.astro";
 import Layout from "../layouts/Layout.astro";
 import PostList from "../components/PostList.astro";
 import LogoAstroReact from "../components/LogoAstroReact.astro";
+import { BLOG_DESCRIPTION, BLOG_TITLE } from "../lib/constantes";
 
 const posts = await getCollection("posts")
 ---
-<Layout title='Blog | posts'>
+<Layout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
   <Main>
         <PostList posts={posts} home={false} />
         <div class="flex justify-center mt-10">
