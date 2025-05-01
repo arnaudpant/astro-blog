@@ -2,15 +2,12 @@
 import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
 import PostList from "../components/PostList.astro";
-import { getCollection } from "astro:content";
-import { Image } from 'astro:assets';
-import myLogo from '../assets/logo-astro-kal.png';
+import { getCollection, type CollectionEntry } from "astro:content";
 import LogoAstroReact from '../components/LogoAstroReact.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../lib/constantes';
 
 export const prerender = true
 const posts = await getCollection("posts")
-
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>

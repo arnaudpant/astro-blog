@@ -2,6 +2,7 @@
 import type {CollectionEntry} from "astro:content"
 import Post from "./Post.astro"
 import PostHome from "./PostHome.astro"
+import type postcss from "postcss"
 
 type Props = {
     posts: CollectionEntry<"posts">[]
@@ -9,12 +10,15 @@ type Props = {
 }
 
 const {posts, home} = Astro.props
+
+const postsSort = posts.sort((a:CollectionEntry<"posts">, b:CollectionEntry<"posts">) => b.data.rang.valueOf() - a.data.rang.valueOf())
+
 ---
 
 <div
     class="flex flex-wrap justify-center gap-4"
 >
     {
-        home ? posts.map(post => <PostHome post={post} />).reverse().slice(0, 3) : posts.map(post => <Post post={post} />).reverse()
+        home ? postsSort.map(post => <PostHome post={post} />).slice(0, 3) : posts.map(post => <Post post={post} />)
     }
 </div>

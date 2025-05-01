@@ -1,10 +1,9 @@
 import { z, defineCollection } from "astro:content"
 
 const sourcesCollection = defineCollection({
-    schema: ({ image }) =>
+    schema: 
         z.object({
             name: z.string(),
-            image: image(),
         }),
 })
 
@@ -13,19 +12,19 @@ const postsCollection = defineCollection({
         z.object({
             source: z.string(),
             categories: z.array(z.string()),
-            date: z
-                .string(),
+            date: z.string(),
             image: image(),
             title: z.string(),
-            infos: z.string()
+            infos: z.string(),
+            rang: z.number()
         }),
 })
+// ["Frameworks", "Apprentissage", "Stratégie", "Vente", "Action", "Emploi", "Analyse", "Astro", "Projets"]
 
 const sourcesCategory = defineCollection({
-    schema: ({ image }) =>
+    schema:
         z.object({
             name: z.string(),
-            image: image(),
         }),
 })
 
