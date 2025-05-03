@@ -10,9 +10,9 @@ const posts = await getCollection("posts")
 ---
 <Layout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
   <Main>
-        <PostList posts={posts} home={false} />
-        <div class="flex justify-center mt-10">
-			    <LogoAstroReact taille={80} />
-		    </div>
+    <PostList posts={posts} home={false} />
+    <div class="flex justify-center mt-10">
+			<LogoAstroReact taille={80} />
+		</div>
 	</Main>
 </Layout>

@@ -5,8 +5,11 @@ import Layout from "../../layouts/Layout.astro"
 import "../../styles/global.css";
 
 const {slug} = Astro.params;
-const post = await getEntry("posts",  slug as string)
+if (!slug) {
+    return Astro.redirect('/404')
+}
 
+const post = await getEntry("posts",  slug as string)
 if (!post) {
     return Astro.redirect('/404')
 }
