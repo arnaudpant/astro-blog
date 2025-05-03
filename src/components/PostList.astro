@@ -1,23 +1,24 @@
 ---
+import { getCollection } from "astro:content";
 import type {CollectionEntry} from "astro:content"
 import PostPageBlog from "./PostPageBlog.astro"
 import PostPageHome from "./PostPageHome.astro"
-import type postcss from "postcss"
 import { HOME_ARTICLES_LIMIT } from "../lib/constantes"
 
 type Props = {
-    posts: CollectionEntry<"posts">[]
     home: boolean
 }
 
-const {posts, home} = Astro.props
+const {home} = Astro.props
+
+const posts = await getCollection("posts")
 
 const postsSort = posts.sort((a:CollectionEntry<"posts">, b:CollectionEntry<"posts">) => b.data.rang.valueOf() - a.data.rang.valueOf())
 
 ---
 
 <div
-    class="flex flex-wrap justify-center gap-4"
+    class="flex flex-wrap justify-center gap-x-4 gap-y-8"
 >
     {
         home ? postsSort.map(post => <PostPageHome post={post} />).slice(0, HOME_ARTICLES_LIMIT) : posts.map(post => <PostPageBlog post={post} />)

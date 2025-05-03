@@ -8,6 +8,7 @@ type Props = {
 }
 
 const { post } = Astro.props
+
 ---
 
 <article class="max-w-lg">
@@ -26,14 +27,14 @@ const { post } = Astro.props
             width={600}
             height={600 / 1.5}
             format="webp"
-            class="rounded-2xl shadow-lg aspect-thumbnail object-cover"
+            class="rounded-t-2xl aspect-thumbnail object-cover"
         />
-        <div class="flex flex-col justify-between shadow-md rounded-b-lg min-h-48 p-2">
+        <div class="flex flex-col justify-between border-b-4 border-l border-r border-t-0 rounded-b-lg min-h-48 p-2">
             <p class="text-title text-2xl mb-5 line-clamp-2 text-left">
                 {post.data.title}
             </p>
             <p class="text-md text-textgrey/70 pb-2">{post.data.infos}</p>
-            <div class="">
+            <div>
                 <CategoryList categories={post.data.categories} />
             </div>
 
