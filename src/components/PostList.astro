@@ -1,7 +1,7 @@
 ---
 import type {CollectionEntry} from "astro:content"
-import PostsPageBlog from "./PostsPageBlog.astro"
-import PostsPageHome from "./PostsPageHome.astro"
+import PostPageBlog from "./PostPageBlog.astro"
+import PostPageHome from "./PostPageHome.astro"
 import type postcss from "postcss"
 import { HOME_ARTICLES_LIMIT } from "../lib/constantes"
 
@@ -20,6 +20,6 @@ const postsSort = posts.sort((a:CollectionEntry<"posts">, b:CollectionEntry<"pos
     class="flex flex-wrap justify-center gap-4"
 >
     {
-        home ? postsSort.map(post => <PostsPageHome post={post} />).slice(0, HOME_ARTICLES_LIMIT) : posts.map(post => <PostsPageBlog post={post} />)
+        home ? postsSort.map(post => <PostPageHome post={post} />).slice(0, HOME_ARTICLES_LIMIT) : posts.map(post => <PostPageBlog post={post} />)
     }
 </div>

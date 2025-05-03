@@ -6,7 +6,7 @@ import "../../styles/global.css";
 
 const {slug} = Astro.params;
 if (!slug) {
-    return Astro.redirect('/404')
+    throw new Error("Slug from blog is required")
 }
 
 const post = await getEntry("posts",  slug as string)
