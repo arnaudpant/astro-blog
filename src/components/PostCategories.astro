@@ -1,0 +1,19 @@
+---
+import type {CollectionEntry} from "astro:content"
+import PostPageBlog from "./PostPageBlog.astro"
+
+
+const { postsByCategory } = Astro.props
+
+
+const postsSort = postsByCategory.sort((a:CollectionEntry<"posts">, b:CollectionEntry<"posts">) => b.data.rang.valueOf() - a.data.rang.valueOf())
+
+---
+
+<div
+    class="flex flex-wrap justify-center gap-x-4 gap-y-8"
+>
+    {
+        postsSort.map((post: any) => <PostPageBlog post={post} />)
+    }
+</div>
