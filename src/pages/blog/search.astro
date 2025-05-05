@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Main from "../../components/Main.astro";
+
+const query: string | null = Astro.url.searchParams.get("query") 
+
+const allBlogArticles: CollectionEntry<"posts">[] = await getCollection("posts")
+---
+
+<Layout title="Résultats de recherche">
+    <Main>
+        <h1>{query}</h1>
+        
+    </Main>
+
+</Layout>
