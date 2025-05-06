@@ -18,8 +18,8 @@ const posts = await getCollection("posts")
 			<SearchBar />
 		</div>
 		<p class="text-textgrey text-center pb-6">Derniers articles 👇🏻</p>
-		<PostList posts={posts} home={true} />
-		<a href="/blog"><p class="text-textgrey text-center pb-6">Tous les articles 👉🏻</p></a>
+		<PostList home={true} />
+		<a href="/blog"><p class="text-lg md:text-xl text-textgrey text-center py-6">Tous les articles 👉🏻</p></a>
 		<div class="flex justify-center mt-4">
 			<LogoAstroReact taille={80} />
 		</div>

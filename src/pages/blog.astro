@@ -4,10 +4,15 @@ import Layout from "../layouts/Layout.astro";
 import PostList from "../components/PostList.astro";
 import LogoAstroReact from "../components/LogoAstroReact.astro";
 import { BLOG_DESCRIPTION, BLOG_TITLE } from "../lib/constantes";
+import SearchBar from "../components/SearchBar.astro";
 
 ---
 <Layout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
   <Main>
+    <h1 class="text-title text-xl md:text-3xl text-center pb-10 md:pb-6">Tous les articles sur Astro, React et plus</h1>
+    <div class="flex justify-center mb-6">
+			<SearchBar />
+		</div>
     <PostList home={false} />
     <div class="flex justify-center mt-10">
 			<LogoAstroReact taille={80} />
