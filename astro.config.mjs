@@ -8,9 +8,11 @@ import mdx from '@astrojs/mdx';
 
 import netlify from '@astrojs/netlify';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), mdx()],
+  integrations: [react(), mdx(), sitemap()],
   output: 'server',
   adapter: netlify(),
 
