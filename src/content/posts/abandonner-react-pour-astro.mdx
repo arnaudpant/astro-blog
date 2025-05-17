@@ -1,0 +1,59 @@
+---
+source: Personnelle
+categories: ["Analyse", "Projets"]
+date: 16/05/2025
+image: ./images/article-06.png
+banner: /images/article-06.webp
+title: Abandonner React pour Astro
+infos: rien de mieux pour apprendre que de pratiquer !
+rang: 6
+---
+<img src={frontmatter.banner} alt={frontmatter.title} width={800} className="rounded-3xl mx-auto" />
+
+# J'ai presque abandonné React pour Astro : Retour d'expérience
+
+## Une décision technique qui a dépassé mes attentes
+
+Comme le dit l'adage, rien de mieux pour apprendre que de pratiquer. C'est dans cet état d'esprit que je me suis lancé dans la création d'un site avec Astro il y a quelques jours. Ce qui devait être un simple site s'est rapidement transformé en blog personnel, un format qui s'est avéré parfaitement adapté au vu de la documentation d'Astro. C'était aussi l'occasion parfaite de concrétiser une envie qui me trottait dans la tête depuis longtemps : avoir un espace d'expression personnel, indépendant des plateformes existantes.
+
+## Qu'est-ce qui change par rapport à React ?
+
+### 1. Le routing : une simplicité déconcertante
+
+La première chose qui m'a frappé, c'est l'incroyable simplicité du système de routing d'Astro. Fini les configurations complexes ou l'installation laborieuse de React Router ! Avec Astro, le routing est basé sur les fichiers : chaque fichier dans le dossier `src/pages/` devient automatiquement une route. Une approche intuitive qui réduit considérablement la courbe d'apprentissage et le temps de développement.
+
+### 2. Performances : là où tout se joue
+
+C'est sans doute l'aspect le plus impressionnant d'Astro. J'ai commencé par développer un site statique, mais j'ai rapidement voulu explorer les possibilités du rendu côté serveur (SSR). Cette approche permet d'envoyer du HTML prêt à l'emploi directement au navigateur, offrant une expérience utilisateur quasi instantanée.
+
+La force d'Astro réside dans son approche d'« hydratation partielle ». Contrairement à React où tout le JavaScript est nécessaire pour construire la page (même pour du contenu principalement statique), Astro charge intelligemment le JavaScript uniquement lorsque c'est nécessaire. Le résultat est spectaculaire : des temps de chargement quasi instantanés et des scores Lighthouse qui frôlent constamment les 100/100.
+
+### 3. Le SEO : mon nouveau dada
+
+L'optimisation pour les moteurs de recherche est devenue une préoccupation majeure pour tout développeur web. Là encore, Astro excelle en générant des fichiers HTML statiques dès la phase de build. Cette approche présente deux avantages majeurs :
+- Un meilleur indexage par les moteurs de recherche
+- Une réduction significative du JavaScript inutile envoyé au navigateur
+
+Résultat : un site naturellement optimisé pour le SEO sans effort supplémentaire.
+
+### 4. L'architecture : la philosophie "Islands"
+
+Bien que je n'aie pas encore exploré toutes les possibilités de cette architecture, la philosophie "Islands" d'Astro est particulièrement séduisante. Elle permet d'intégrer des composants React (ou Vue, Svelte, etc.) uniquement aux endroits où c'est nécessaire. Cette flexibilité offre le meilleur des deux mondes : la simplicité d'Astro et la puissance des frameworks populaires quand on en a besoin.
+
+## Pourquoi Astro plutôt que Next.js ?
+
+Choisir Astro plutôt que Next.js a été pour moi un choix gagnant sur plusieurs aspects :
+- Un temps de développement considérablement réduit
+- Des performances excellentes dès les premières lignes de code
+- Un SEO optimisé par défaut
+- Une courbe d'apprentissage beaucoup plus douce
+
+## Conclusion : le meilleur outil n'est pas forcément le plus populaire
+
+Cette expérience m'a rappelé une leçon importante : le framework le plus populaire n'est pas nécessairement le plus adapté à tous les projets. React reste un excellent outil pour des applications complexes et hautement interactives, mais pour un blog ou un site vitrine, Astro offre une alternative plus légère, plus performante et finalement plus agréable à utiliser.
+
+Astro m'a permis de me concentrer sur le contenu plutôt que sur la configuration technique, tout en offrant des performances et une optimisation SEO de premier ordre. Une belle surprise qui méritait d'être partagée.
+
+---
+
+*Vous avez des questions sur mon approche ou envie de développer un site ultra-rapide et optimisé SEO ? N'hésitez pas à me contacter !*
