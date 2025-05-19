@@ -1,0 +1,65 @@
+---
+source: Article
+categories: ["Frameworks", "Apprentissage"]
+date: 17/05/2025
+image: ./images/article-07.png
+banner: /images/article-07.webp
+title: React Server Components et Astro
+infos: Petites explications sur les React Server Components avec React et Astro
+rang: 7
+---
+<img src={frontmatter.banner} alt={frontmatter.title} width={800} className="rounded-3xl mx-auto" />
+
+## React Server Components et Astro : C’est quoi la différence ?
+
+
+Aujourd’hui petites explications sur les React Server Components.
+Dan Abramov (de l'équipe React) a récemment utilisé Astro pour clarifier certains concepts de RSC. Et si Astro était en fait le meilleur moyen de comprendre tout ce bazar de RSC ?
+
+### Astro comme tremplin vers les RSC
+Je vais vous dire un truc : si vous avez déjà touché à Astro, même un peu, vous comprenez déjà presque tout du concept des RSC. Et oui !
+
+### Dans le monde Astro, vous avez :
+1. Les composants Astro (fichiers .astro) Ils ne mettent JAMAIS les pieds côté client. Jamais. Leur code reste sagement sur le serveur. Ça veut dire qu'ils peuvent faire des trucs un peu cool comme lire directement dans votre base de données ou accéder à vos API internes sans exposer de secrets. Leur job ? Cracher du bon vieux HTML.
+2. Les îlots clients (Client Islands) C'est là que vous placez vos composants React/Vue/Svelte qui ont besoin d'interactivité. Le truc top avec Astro, c'est que vous devez explicitement dire "celui-là, il sera interactif" avec des directives comme `client:load` Pas d'ambiguïté possible.
+
+### Maintenant, dans l'univers React Server Components :
+* Server Components : L'équivalent des composants Astro
+* Client Components : L'équivalent des îlots clients
+C'est presque comme si les deux équipes avaient partagé leurs idées autour d'une bière !
+
+### Les différences ? Plus une question de style que de fond
+Là où ça diverge, c'est surtout dans la forme :
+* Avec RSC, tout est dans le même langage - juste des fonctions React. Pas de fichiers spéciaux comme .astro.
+* Pour marquer la frontière serveur/client, RSC utilise la directive 'use client' en haut de fichier, alors qu'Astro utilise des fichiers distincts et des directives comme `client:load`
+
+Cette approche "tout est React" des RSC est à double tranchant :
+* La galère : au début, vous allez constamment vous demander "mais je suis où là ? côté serveur ou client ?"
+* La magie : une fois qu'on a pigé, les frontières deviennent super fluides et on peut naviguer facilement entre les deux mondes.
+
+### Pourquoi RSC pourrait être mieux qu'Astro dans certains cas
+Je dois l'admettre que RSC résout quelques problèmes :
+* Vous avez déjà commencé à coder un composant Astro pour réaliser ensuite "merde, il me faut de l'interactivité" ? Avec RSC, passer du serveur au client est moins douloureux. Juste un petit 'use client' et hop, le tour est joué.
+* On galére à faire communiquer des îlots React entre eux dans Astro. Avec RSC, c'est un arbre React unique, donc les contextes et autres fonctionnent naturellement.
+* La navigation dans Astro, c'est du rechargement de page par défaut. RSC, avec son format basé sur JSON, vous donne cette sensation d'app monopage tout en gardant les avantages d'une appli multipage.
+* Et puis, rafraîchir juste un bout de composant serveur sans tout recharger ? RSC le fait naturellement.
+
+### Mais Astro ne se laisse pas faire !
+Astro n'est pas resté les bras croisés, et franchement, certaines de leurs solutions sont carrément cool :
+* Les transitions de vue : Pour avoir cette sensation d'app sans rechargement brutal.
+* Les îlots de serveur (server:defer) : Ça permet d'afficher une page immédiatement avec un fallback pendant que les données se chargent en arrière-plan. C'est un peu leur version de Suspense.
+* Les Actions : Fini le boilerplate des endpoints API ! Vous définissez une fonction côté serveur, vous la typez avec Zod, et vous pouvez l'appeler directement depuis le client ou même des formulaires HTML classiques. Propre, net et sans bavure.
+* Les Sessions : Une nouvelle feature pour stocker des données côté serveur entre les requêtes. Idéal pour les paniers d'achat ou les préférences utilisateur sans surcharger les cookies.
+
+Au final, que choisir ?
+Personnellement ? J'utilise les deux selon les projets.
+
+Si vous débutez avec les serveur/client ou si vous préférez des frontières claires entre les deux, Astro est probablement votre meilleur pari.
+
+Si vous êtes déjà dans l'écosystème React et que vous cherchez une solution tout-en-un, les RSC pourraient être ce qu'il vous faut.
+
+L’avenir du web semble se diriger vers cette approche hybride, avec une séparation plus intelligente entre ce qui tourne sur le serveur et ce qui tourne chez l'utilisateur.
+
+See you soon pour d'autres aventures Astrales ! 🧑🏻‍🚀 🚀
+
+L'article de Dan Abramov: https://overreacted.io/rsc-for-astro-developers/
